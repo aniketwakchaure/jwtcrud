@@ -1,7 +1,13 @@
-const app = require("../app")  
+const express = require("express")
+const { register } = require("../controller/controller")
+
+const router = express()
 
 //Register
-app.post("/register")
+router.post("/register", register)
 
 //Login
-app.post("/login")
+router.post("/login")
+
+
+module.exports = {router}
